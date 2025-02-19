@@ -1,0 +1,2950 @@
+
+/* *,::before,::after{
+  outline: 1px solid red;
+} */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Plus Jakarta Sans", serif
+}
+img{
+  width: 100%;
+  height: auto;
+}
+
+
+/* Navbar Styling */  
+/* Sticky Navbar */
+/* --- General Navbar Styles --- */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Navbar Links --- */
+.navbar-nav {
+  gap: 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(58, 73, 99, 1);
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #e65252;
+}
+
+/* --- Right Icons --- */
+.nav-img img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+
+.nav-menu-img {
+  width: 22px !important;
+  height: 20px !important;
+}
+
+.profile-img {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.nav-img {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* --- Toggler Button (Crucial!) --- */
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+}
+
+/* Ensure the toggle is visible on smaller screens. */
+.navbar-toggler {
+  display: none; /* Initially hidden. */
+}
+.navbar-toggler-icon {
+  filter: invert(1); /* Invert the colors (white to black) */
+}
+@media (max-width: 992px) {
+  .navbar-toggler {
+      display: block; /* Make it visible on smaller screens */
+  }
+}
+
+/* --- Mobile View Styling --- */
+@media (max-width: 992px) {
+  .navbar-collapse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-img {
+      justify-content: center;
+      margin-top: 15px;
+  }
+
+  .nav-menu-img {
+      display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar-nav .nav-item .nav-link {
+      font-size: 13px
+  }
+}
+
+@media (max-width: 800px) {
+  /* Adjust Logo Size */
+  .logo img {
+      max-width: 120px;
+  }
+
+  /* Remove Border on Small Screens */
+  .nav-img {
+      border: none;
+      padding: 4px;
+  }
+
+  .notification-img {
+      max-width: 20px;
+  }
+
+  .profile-img {
+      width: 35px !important;
+      height: 35px !important;
+  }
+
+  /* Center Align Navbar Items */
+  .navbar-collapse {
+      text-align: center;
+  }
+
+  /* Move Right Icons Inside Navbar in Mobile View */
+  .nav-img {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+  .navbar-collapse {
+      transition: height 0.3s ease-in-out;
+  }
+}
+
+/* Add a specific query for 724px, if needed */
+@media (max-width: 724px) {
+  /* You can add specific styling here if needed */
+}
+
+
+/* Hero-Section */
+.hero-section {
+  padding: 150px 0;
+  display: flex;
+  align-items: center;
+  background: rgba(233, 244, 255, 1);
+  position: relative;
+}
+p{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 8px 22px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  max-width: 658px;
+  margin: auto;
+}
+.search-bar-items {
+  display: flex;
+  flex-direction: column;
+}
+.search-bar span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #d9534f;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+.search-bar button {
+  border: none;
+  background-color: white;
+}
+.search-bar button img {
+  width: 22px;
+  height: 22px;
+}
+.hero-left{
+  padding-top: 96px;
+}
+.hero-left p{
+  padding-top: 20px;
+}
+.right-btn{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(230, 82, 82, 1);
+  margin-top: 50px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #2c3e50;
+}
+/* p {
+  font-size: 1.1rem;
+  color: #6c757d;
+} */
+
+.hero-right img {
+  width: 100%;
+  border-radius: 12px;
+  padding-top: 60px;
+  width: 600px;
+  position: absolute;
+  bottom: -164px;
+}
+@media (max-width:1024px) {
+  .hero-right img{
+    border-radius: 12px;
+    padding-top: 60px;
+    position: absolute;
+    width: 570px;
+    height: 703px;
+    right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-left h1{
+    font-size: 30px
+  }
+  
+  .right-btn{
+    margin-top: 30px;
+  }
+  .search-bar {
+    flex-direction: row;
+    margin-top: 6px;
+    /* width: 500px; */
+    /* padding: 5px 15px; */
+  }
+  .hero-right img{
+    width: 400px;
+    height: 550px;
+    bottom: -104px;
+    /* right: 30%; */
+  }
+  .hero-left{
+    padding-top: 36px;
+  }
+}
+
+@media (max-width: 426px) {
+  .hero-left h1{
+    font-size: 20px
+  }
+  .hero-left p{
+    font-size: 12px;
+  }
+  .right-btn{
+    margin-top: 20px;
+  }
+  .search-bar {
+    flex-direction: row;
+    margin-top: 6px;
+    /* width: 500px; */
+    /* padding: 5px 15px; */
+  }
+  .hero-right img{
+    width: 200px;
+    height: 350px;
+    bottom: -104px;
+    right: 30%;
+  }
+  .hero-left{
+    padding-top: 36px;
+  }
+}
+
+
+/* Testimonials */
+
+.Testimonials{
+  padding-top: 84px;
+}
+.test-left{
+  display: flex;
+}
+.test-left-img-heading{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -2%;  
+}
+.test-left-card{
+ border: 2px solid rgb(232, 232, 232);
+ border-radius: 10px;
+ padding: 20px;
+ margin-right: 5px;
+} 
+.test-left-img{
+  width: 194px;
+  height: 211px;
+}
+.test-left-user button img{
+  width: 22px;
+  height: 24px;
+  
+}
+.test-left-img{
+  margin-top: 72px;
+}
+.test-left-user button{
+  border: none;
+  background: rgba(117, 214, 171, 1);
+  padding: 5px;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+.test-left-property-card{
+  display: flex;
+  justify-content: space-between;
+}
+.test-left-img-heading p{
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--Body, rgba(86, 83, 83, 1));
+}
+.property-card p{
+  font-family: "Poppins";
+font-weight: 400;
+font-size: 12px;
+}
+.property-card h3{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 22px;
+}
+.test-right-human-images img{
+  width: 80px;
+  height: 80px;
+}
+.test-right {
+  position: absolute;
+  right:6%;
+}
+.test-right p{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+.test-right{
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.test-left-density{
+  background: rgba(233, 244, 255, 1);
+  padding: 30px;
+  border-radius: 12px;
+}
+.test-left-property-card{
+  padding: 20px;
+  border: 2px solid rgb(232, 232, 232);
+  max-width: 350px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.test-left-density h5{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 39px;
+  letter-spacing: 0%;
+}
+
+@media (max-width:550px) {
+  .test-right-human-images img {
+    width: 60px;
+    height: 61px;
+}
+.test-bottomm-2 {
+  margin: 14px;
+}
+.card-item-1 {
+  margin-bottom: 10px;
+}
+.test-left-card {
+  padding: 12px;
+}
+.test-left-img img{
+  width: 150px;
+  height: 100px;
+}
+.test-left-card {
+  width: 222px;
+  height: 239px;
+}
+}
+
+/* test-row-2 */
+
+.test-2-row{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.test-bottomm-2{
+  background: rgba(233, 244, 255, 1);
+  max-width: 230px;
+  border-radius: 10px;
+}
+.test-bottomm-2 p{
+  padding: 50px 5px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 52px;
+  text-align: center;
+  color: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+}
+.card-item-1{
+  border: 2px solid rgb(232, 232, 232);
+  padding: 20px;
+  border-radius: 12px;
+}
+.card-item-1 .card-img{
+  padding-top: 35px;
+}
+.card-item-1 p{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--Body, rgba(86, 83, 83, 1));
+}
+.card-item-2{
+  border: 2px solid rgb(232, 232, 232);
+  padding: 20px;
+  border-radius: 12px;
+}
+.price{
+  display: flex;
+}
+.price h2{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 22px;
+}
+.price p{
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+}
+.card-sub-head{
+  display: flex;
+  justify-content: space-between;
+}
+.card-sub-head{
+  padding-top: 45px;
+}
+.card-price-button button{
+  padding: 10px 15px;
+  border-radius: 50%;
+  background: rgba(117, 214, 171, 1);
+  color: white;
+  font-size: 20px;
+  font-weight: 500 !important;
+  border: none;
+}
+.card-head p{
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 15px;
+}
+.compared{
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(186, 186, 186, 1);
+}
+
+@media (max-width:426px) {
+  .test-left{
+    display: block;
+  }
+  .test-right p{
+    padding-bottom: 10px;
+  }
+  .test-right{
+    position: relative;
+    padding-top: 30px;
+    margin-left:20px
+  }
+  .test-left-property-card{
+    margin-top: 10px;
+  }
+  .test-left-density {
+    padding: 10px;
+  }
+  .test-left-density h5{
+    font-size: 14px;
+  }
+}
+
+/* house-hunt */
+
+/* Base styles for desktop and larger screens */
+/* Common Styles (same as before) */
+/* Section Styles */
+.house-hunt {
+  margin: 67px 0 20px 0;
+  position: relative;
+}
+
+
+
+.house-hunt-heading {
+  display: flex;
+}
+
+.house-hunt-right-cards {
+  padding-top: 40px;
+}
+
+.house-hunt-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Bg-grey, rgba(218, 218, 218, 1));
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.house-hunt-button button {
+  width: 252px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  background: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.cards {
+  width: 100%;
+  max-width: 252px;
+  /* height: 300px; */
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid var(--Bg-grey, rgba(218, 218, 218, 1));
+  background-color: white;
+}
+
+.house-hunt-card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-imgs button img {
+  width: 23px;
+  height: 25px;
+}
+
+.card-imgs button {
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  background: rgba(117, 214, 171, 1);
+}
+
+/* .card {
+  max-width: 252px;
+  max-height: 350px;
+  gap: 40px;
+  border-radius: 12px;
+  padding: 10px;
+} */
+
+.location-icon img {
+  width: 14px;
+  height: 14px;
+}
+
+.card-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.card-number img {
+  width: 15px;
+  height: 14px;
+}
+
+.card-number {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-item-details {
+  padding-top: 10px;
+}
+
+.hund-right-heading {
+    background-image: url('./HomePage-img/House-hunt-img/hunt-bg (1).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* Make it responsive */
+    max-width: 800px; /* Limit width on larger screens */
+    height: 550px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: end;
+    justify-content: end;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cards {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.location-icon img {
+  width: 14px;
+  height: 14px;
+}
+.card-number img {
+  width: 15px;
+  height: 14px;
+}
+
+
+/* --- Media Queries --- */
+
+@media (min-width: 1200px) {
+    .hund-right-heading {
+        position: absolute; /* Absolutely position to break free */
+        right: 22px; /* Adjust to move off the screen */
+        width: 760px; /* Make it wider */
+        max-width: none; /* Remove any max-width */
+        height: 600px; /* Adjust as needed */
+    }
+}
+
+/* Landscape tablets and smaller desktops (up to 992px) */
+@media (max-width: 1024px) {
+  .house-hunt-heading {
+      display: flex;
+      /* flex-direction: column; Stack heading and button */
+      text-align: center;
+  }
+  .hund-right-heading {
+    height: 90%;
+    position: relative;
+    max-width: 100%;
+    text-align: start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0px;  
+       
+  }
+
+  .house-hunt {
+      text-align: center;
+      margin: 50px 0 20px 0;
+  }
+
+  .house-hunt-button button {
+      width: 200px;
+      font-size: 12px;
+      margin-top: 10px;
+  }
+
+  .house-hunt-card-img {
+      width: 100%;
+      height: auto;
+  }
+  .hund-right-heading {
+    height: 90%;
+    position: relative;
+    max-width: 100%;
+    text-align: start;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    gap: 10px;  
+  }
+ 
+
+  .cards { /* Added responsive styling */
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .house-hunt-heading {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .house-hunt-right-cards {
+      padding-top: 50px;
+  }
+
+  .house-hunt-card {
+      justify-content: space-evenly;
+  }
+
+  .house-hunt-card-img {
+      width: 100%;
+      height: auto;
+  }
+  .hund-right-heading{
+      height: auto;
+       max-width: none;
+       flex-direction: row;
+  }
+   .cards {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 580px) {
+  .house-hunt-button button {
+      width: 100%;
+      padding: 12px 15px;
+  }
+  .number{
+    font-size: 10px !important;
+  }
+
+  .house-hunt-card {
+      /* flex-direction: column; */
+      align-items: flex-start;
+  }
+
+  .house-hunt-card-img {
+      width: 100%;
+      height: auto;
+  }
+
+  .hund-right-heading {
+      padding: 10px;
+      height: auto;
+      max-width: none;
+      flex-direction: column;
+  }
+
+    .cards {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .card-item-details h5{
+      font-size: 15px
+    }
+    .card-item-details p{
+      font-size: 13px;
+      padding-top: 5px;
+    }
+    .house-hunt-right-cards {
+      padding-top: 50px;
+
+  }.location-icon{
+    font-size: 9px !important;
+  }
+  .location-icon img{
+    width: 11px;
+    height: 11px;
+  }
+  .card-number img {
+    width: 12px;
+    height: 10px;
+}
+}
+/* Desktop-valuation" */
+/* Common Styles */
+/* General Styles */
+
+
+.desk-top{
+   padding: 100px 0px;
+}
+.grap-1{
+  width: 252px;
+  height: 202px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.grap-1 img{
+  width: 212px;
+  height: 90px;
+}
+.grap-1 p , .grap-2 p{
+  padding-bottom: 30px;
+}
+
+.grap-2{
+  width: 252px;
+  height: 316px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 60px;
+}
+.grap-2 img{
+  width: 212PX;
+  height: 204PX;
+
+}
+.text-container-btn{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  /* text-align: end; */
+  border: none;
+}
+.desktop-image-container {
+  position: relative;
+  height: 76vh;
+  width: 59%;
+  background-image: url("./HomePage-img/Desktop-img/desk-top-bg\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.desktop-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+}
+.desktop-text-container{
+  padding: 30px;
+  position: absolute;
+  right: 0px;
+}
+@media (max-width:1024px) {
+  .desktop-image-container{
+    height: 92vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .desktop-image-container{
+    width: 100%;
+  }
+  .desktop-text-container {
+    padding: 20px;
+    position: relative;
+}
+.desktop-image-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.grap-2{
+  margin: 10px;
+
+}
+.desktop-text-container h1 {
+    font-size: 30px;
+}
+
+.desktop-text-container .lead {
+    font-size: 16px;
+}
+
+}
+
+
+/* investible-report-section*/
+.house-hunt {
+  margin: 67px 0 20px 0;
+  position: relative;
+}
+
+
+
+.house-hunt-heading {
+  display: flex;
+}
+
+.investable-right-cards-2 {
+  /* padding-top: 40px; */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.house-hunt-button button {
+  width: 252px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  background: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+  color: white;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.cards {
+  width: 100%;
+  max-width: 252px;
+  /* height: 300px; */
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid var(--Bg-grey, rgba(218, 218, 218, 1));
+  background-color: white;
+}
+
+.house-hunt-card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-imgs button img {
+  width: 23px;
+  height: 25px;
+}
+
+.card-imgs button {
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  background: rgba(117, 214, 171, 1);
+}
+
+/* .card {
+  max-width: 252px;
+  max-height: 350px;
+  gap: 40px;
+  border-radius: 12px;
+  padding: 10px;
+} */
+
+
+
+.card-icons {
+  display: flex;
+  gap: 5px;
+}
+
+
+
+.card-number {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-item-details {
+  padding-top: 10px;
+}
+
+.Invest-right-card {
+    background-image: url('./HomePage-img/Desktop-img/Investible-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* Make it responsive */
+    max-width: 800px; /* Limit width on larger screens */
+    height: 550px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: end;
+    justify-content: end;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cards {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.my-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  background-color: white;
+}
+#my-card-1{
+  width: 252px;
+  /* height: 300px; */
+  /* gap: 20px; */
+  border-radius: 12px;
+  border-width: 1px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  
+}
+#my-card-2{
+width: 252px;
+height: 337px;
+gap: 20px;
+border-radius: 12px;
+border-width: 1px;
+padding-top: 15px;
+padding-right: 10px;
+padding-bottom: 15px;
+padding-left: 10px;
+
+}
+.my-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.my-price-card {
+  margin-top: 1.5rem;
+}
+
+.my-price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.my-price-row strong {
+  font-weight: 500;
+}
+
+.my-total-row {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.my-pay-button {
+  background-color: #8FE1B8;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.my-pay-button:hover {
+  background-color: #7dd2a6;
+}
+
+.my-terms-checkbox {
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+}
+
+.my-terms-checkbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+
+.my-detail-item img {
+  width: 23px;
+  height: 23px;
+
+  padding-right: 1px;
+  padding-left: 1px;
+
+}
+.desktop-text-container h1{
+  color: rgba(58, 73, 99, 1);
+}
+/* --- Media Queries --- */
+/* For larger screens, create the "off-the-page" effect */
+@media (min-width: 1200px) {
+  .Invest-right-card {
+        position: absolute; /* Absolutely position to break free */
+        right: 22px; /* Adjust to move off the screen */
+        width: 760px; /* Make it wider */
+        max-width: none; /* Remove any max-width */
+        height: 600px; /* Adjust as needed */
+    }
+}
+
+/* Landscape tablets and smaller desktops (up to 992px) */
+@media (max-width: 1024px) {
+  .house-hunt-heading {
+      display: flex;
+      flex-direction: column; /* Stack heading and button */
+      text-align: center;
+  }
+  .Invest-right-card {
+    height: 90%;
+    position: relative;
+    max-width: 100%;
+    text-align: start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0px;  
+       
+  }
+
+  .house-hunt {
+      text-align: center;
+      margin: 50px 0 20px 0;
+  }
+
+  .house-hunt-button button {
+      width: 200px;
+      font-size: 14px;
+      margin-top: 10px;
+  }
+
+  .house-hunt-card-img {
+      width: 100%;
+      height: auto;
+  }
+  .Invest-right-card {
+    height: 90%;
+    position: relative;
+    max-width: 100%;
+    text-align: start;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;  
+  }
+ 
+
+  .cards { /* Added responsive styling */
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .house-hunt-heading {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  
+
+  .house-hunt-card {
+    text-align: start;
+  }
+
+  .house-hunt-card-img {
+      width: 100%;
+      height: auto;
+  }
+  .Invest-right-card{
+      height: auto;
+       max-width: none;
+  }
+   .cards {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .house-hunt-button button {
+      width: 100%;
+      padding: 12px 15px;
+  }
+  .desk-top {
+    padding: 50px 0px;
+}
+
+  .house-hunt-card {
+      align-items: flex-start;
+      gap: 8px;
+    padding: 10px;
+  }
+
+  .house-hunt-card-img {
+      width:100%;
+      height: auto;
+  }
+
+  .Invest-right-card {
+      padding: 10px;
+      height: auto;
+        max-width: none;
+  }
+
+    .cards {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .my-card-title{
+      font-size: 15px
+    }
+    .card-text {
+      font-size:10px;
+    }
+    #my-card-1{
+      padding: 7px;
+      border-radius: 5px !important;
+      width: 200px;
+    }
+    .my-price-row {
+      font-size: 10px;
+    }
+    .label {
+      font-size: 10px !important;
+    }
+    .my-pay-button{
+      padding: 8px 12px;
+      width: 50%;
+      font-size: 11px;
+      text-align: start;
+    }
+    #my-card-2{
+      padding: 8px;
+      width: 209px;
+      height: 302px;
+    }
+    .hunt-card-details h3{
+      font-size: 15px;
+    }
+    .hunt-card-details p{
+      font-size:10px;
+    }
+    .card-imgs button {
+      width: 34px;
+      height: 33px;
+}
+.house-sub-heading{
+  font-size: 13px;
+}
+.house-hunt{
+  font-size: 20px;
+  padding: 10px 0px;
+}
+.desktop-image-container{
+  flex-direction: column;
+}
+.grap-2 {
+  width: 232px;
+  height: 285px;
+}
+.grap-2 img {
+  width: 167PX;
+  height: 167PX;
+}
+.grap-1 p, .grap-2 p {
+  font-size: 12px;
+}
+.grap-1 img {
+  width: 169px;
+  height: 93px;
+}
+.desktop-text-container h1 {
+  font-size: 20px;
+  color: rgba(58, 73, 99, 1);
+}
+.desktop-text-container .lead {
+  font-size: 12px;
+}
+.text-container-btn {
+  font-size: 11px;
+  padding: 7px 11px;
+  border-radius: 5px;
+}
+}
+
+/* accordian */
+
+.accordion-button, .accordion-body {
+  text-align: center;
+}
+.accordion-heading{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 50px;
+  padding: 50px 0;
+  line-height: 38px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: rgba(58, 73, 99, 1);
+
+}
+.accordion-button {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 30px !important;
+  color: inherit;
+  display:block;
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 1rem;
+  }
+  .accordion-heading{
+    font-size: 30px;
+  }
+}
+@media (max-width:600px) {
+  .accordion-heading {
+    font-size: 19px;
+}
+.accordion-button{
+  padding: 7px;
+  font-size: 14px;
+}
+}
+
+/* why-choose-us */
+
+/* Section Styles */
+.why-choose-section {
+  padding: 200px 0;
+  text-align: center;
+  position: relative; /* Add back for absolute positioning context */
+  overflow: hidden;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* display: flex; Remove flex */
+  /* flex-direction: column; Remove flex */
+  /* align-items: center; Remove flex */
+}
+
+.section-title-1 {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 38px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: rgba(58, 73, 99, 1);
+  padding-bottom: 100px;
+}
+
+.feature-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative; /* Add to position images relative to cards */
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card-title {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.feature-card-description {
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+#feature-card-special {
+  grid-column: 1 / span 2;
+}
+
+.buildings-image-container {
+  position: absolute; /* Make it an absolute positioning context */
+  bottom: 0;  /* Align images to bottom */
+  left: 0;    /* Align images to left */
+  width: 100%; /* Cover full width */
+  height: 100%;/* Cover full height */
+  pointer-events: none; /* Allow clicking through the images */
+}
+
+#buildings-image-1,
+#buildings-image-2,
+#buildings-image-3 {
+  position: absolute;
+  object-fit:cover;
+}
+
+ #buildings-image-2 {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 426px;
+} 
+
+#buildings-image-1 {
+  left: 28%;
+  bottom: -20px;
+  width: 321px;
+  height: 262px;
+  z-index: 1;
+}
+
+#buildings-image-3 {
+  right: 22%;
+    bottom: -35px;
+    width: 346px;
+    height: 215px;
+}
+/* Responsive Design */
+@media (max-width:1024px) {
+  #buildings-image-2 {
+    left: 50%;
+    bottom: 79px;
+    transform: translateX(-50%);
+    width: 234px;
+    height: 346px;
+  } 
+  
+  #buildings-image-1 {
+    left: 18%;
+    bottom: 67px;
+    width: 250px;
+    height: 200px;
+  }
+  
+  #buildings-image-3 {
+    right: 10%;
+    bottom: 55px;
+    width: 338px;
+    height: 200px;
+  }
+}
+@media (max-width: 992px) {
+  .feature-cards-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  #feature-card-special {
+      grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section{
+    padding-top: 100px;
+  }
+  .feature-cards-container {
+      grid-template-columns: -1fr;
+  }
+
+  #feature-card-special {
+      grid-column: auto;
+  }
+
+  #buildings-image-2{
+      max-width: 100%;
+  }
+  #buildings-image-1 {
+    bottom: 67px;
+    width: 230px;
+    height: 150px;
+  }
+  #buildings-image-2 {
+    bottom: 79px;
+    transform: translateX(-50%);
+    width: 205px;
+    height: 300px;
+}#buildings-image-3 {
+  bottom: 55px;
+  width: 309px;
+  height: 156px;
+}
+}
+ 
+@media (max-width: 424px) {
+  #buildings-image-2 {
+    left: 50%;
+    bottom: 79px;
+    transform: translateX(-50%);
+    width: 184px;
+    height: 346px;
+  } 
+  
+  #buildings-image-1 {
+    left: 18%;
+    bottom: 67px;
+    width: 100px;
+    height: 200px;
+  }
+  
+  #buildings-image-3 {
+    right: 10%;
+    bottom: 55px;
+    width: 100px;
+    height: 200px;
+  }
+}
+/* India */
+
+.India{
+  padding-top: 160px;
+  padding-bottom: 120px;
+}
+
+.House-hunt {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.section-title-2 {
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgba(58, 73, 99, 1);
+  margin-bottom: 100px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styling for individual steps */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+.step {
+  background-color: white;
+  width: 290px;
+  height: 180px;
+  border: 2px solid rgba(218, 218, 218, 1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 13px;
+}
+
+.step-text {
+  font-size: 15px;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.step-text span{
+  font-size: 10px;
+  color: #666;
+}
+/* Hover effect */
+.step:hover {
+  transform: scale(1.1);
+  background-color: #2C3E50;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}
+.step-text span:hover{
+  color: white;
+}
+.step:hover .step-number  {
+  color: rgba(117, 214, 171, 1);
+}
+
+.step:hover .step-text {
+  color: rgba(117, 214, 171, 1);
+}
+/* Remove the line for the last step */
+.step:last-child::before {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .India{
+    padding: 80px 0px;
+  }
+  .step {
+    /* width: 80%; */
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .steps-container::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .step-number {
+    font-size: 28px;
+  }
+
+  .step-text {
+    font-size: 13px;
+  }
+}
+
+
+/* health-card */
+
+.health-card{
+  padding: 100px 0px;
+}
+
+.image-container {
+  position: relative;
+  height: 76vh;
+  width: 59%;
+  background-image: url("./HomePage-img/Desktop-img/health-care.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+
+/* Add a pseudo-element for a semi-transparent overlay if needed */
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
+}
+
+.sales-growth-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  /* width: 35%; */
+}
+
+.sales-growth-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.sales-growth-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.sales-growth-percentage {
+  color: #2ecc71;
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.sales-growth-comparison {
+  font-size: 11px;
+  color: #777;
+}
+
+.contact-button {
+  background-color: #e74c3c; /* Darker Red */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.text-container {
+  padding: 30px;
+  position: absolute;
+  right: 0px;
+}
+
+.text-container h1 {
+  font-size: 36px;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.text-container .lead {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.advice-item {
+  display: flex;
+      margin-top: 20px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid #ecf0f1;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: #fff;
+}
+
+.advice-icon-container {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  position: relative; /* for centering */
+}
+
+.advice-icon-background {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c3e6cb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #38c172; /* Corrected color */
+  font-size: 1.2rem;
+}
+
+.advice-icon-background svg {
+  margin: 10px;
+  width: 31px;
+  height: 26px;
+}
+
+.advice-text h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.advice-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+@media (max-width:1024px) {
+  .image-container{
+    height: 92vh;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .image-container{
+    width: 100%;
+  }
+
+  .text-container {
+      padding: 20px;
+      position: relative;
+  }
+
+  .text-container h1 {
+      font-size: 30px;
+  }
+
+  .text-container .lead {
+      font-size: 16px;
+  }
+
+  .sales-growth-card {
+  
+      left: 5%;
+  }
+  .sales-growth-card{
+    width: 35% !important;
+  }
+}
+@media (max-width:500px) {
+  .sales-growth-card{
+    width: 63% !important;
+  }
+  .health-card{
+    padding: 20px 0px;
+  }
+  .advice-text h4 {
+    font-size: 14px;
+  }
+  .advice-text p {
+    font-size: 10px;
+}    
+.card-imgs button {
+  width: 42px;
+  height: 42px;
+  padding: 0px;
+}
+.card-imgs button img {
+  width: 14px;
+  height: 15px;
+}
+.advice-item{
+  padding: 10px;
+}
+.text-container .lead {
+  font-size: 13px;
+}
+.text-container h1 {
+  font-size: 20px;
+}
+.image-container {
+  width: 102%;
+  height: 49vh;
+}
+.contact-button {
+  font-size: 10px !important;
+  padding: 6px 11px !important;
+}
+.sales-growth-amount {
+  font-size: 15px;
+}
+.sales-growth-title {
+  font-size: 12px;
+}
+.sales-growth-percentage {
+  font-size: 10px;
+}
+.sales-growth-comparison {
+  font-size: 9px;
+}
+.sales-growth-card {
+  width: 44% !important;
+  padding: 11px;
+}
+}
+/* scrool-bar */
+
+
+/* scroll-bar*/
+
+/* Scrollable bar container */
+.scroll-container {
+  width: 100%; 
+  overflow: hidden; 
+  position: relative;  
+  border: 1px solid  rgba(218, 218, 218, 1); 
+  margin: 120px 0px;
+}
+
+/* Scrollable content */
+.scroll-content {
+    display: flex;
+    gap: 130px;
+    animation: scroll 8s linear infinite;
+    padding: 30px;
+}
+
+.scroll-content img {
+  max-width: 105px; 
+  height: auto; 
+  object-fit: contain;
+  flex-shrink: 0; 
+  filter: sepia(0.5);
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-content img {
+    max-width: 60px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-content img {
+    max-width: 50px;
+    
+  }
+  .scroll-content{
+    gap: 20px;
+  }
+}
+
+/* RealEstate */
+.realEstate {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#container {
+  width: 60%; /* Wider container on smaller screens */ /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #333;
+  border-radius: 20px;
+  padding: 0.5rem 1rem; /* Adjust padding for better touch experience */
+}
+
+#nav-list-id {
+  border: 1px solid rgba(218, 218, 218, 1);
+  border-radius: 24px;
+  padding: 10px; /* Reduce padding */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-item button {
+  border: none;
+  background-color: #fff;
+}
+
+#nav-items .nav-link:hover {
+  color: rgba(230, 82, 82, 1) !important;
+}
+
+.RealEstatebutton {
+  text-align: end;
+  padding-top: 20px; /* Reduce padding */
+}
+
+.RealEstatebutton button {
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  background: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+.tab-content {
+  padding: 15px; /* Add some padding */
+}
+
+.realEstate-content {
+  margin-top: 20px;
+}
+
+.realEstate-1 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.realEstate-content-1 {
+  display: flex;
+  flex-direction: row;  /* Ensure horizontal layout */
+ /* Vertically align items */
+  gap: 15px;  /* Reduce spacing between image and text */
+  padding: 15px; /* Reduce padding */
+  border-radius: 12px;
+  border: 1px solid rgba(218, 218, 218, 1);
+  flex: 1;   /* Distribute space evenly */
+  min-width: 250px;  /* Ensure a minimum width for each card */
+}
+
+.realEstate-content-1-img {
+  background: rgba(117, 214, 171, 1);
+  border-radius: 50%;
+  width: 45px; /* Reduce size */
+  height: 45px; /* Reduce size */
+  padding: 7px;
+  display: flex;       /* Use flexbox to center content */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+}
+
+.realEstate-content-1-img img {
+  width: 22px; /* Reduce size */
+  height: 22px; /* Reduce size */
+}
+
+.realEstate-content-1-1 h3 {
+  font-size: 1.1rem; 
+  font-weight: bold; /* Responsive heading size */
+  margin-bottom: 5px;
+}
+
+.realEstate-content-1-1 p {
+  font-size: 0.9rem;  /* Responsive text size */
+}
+
+.realEstate-content-3 {
+  margin-top: 20px;
+  padding: 24px; /* Reduce padding */
+  border: 1px solid rgba(218, 218, 218, 1);
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;  /* Reduce spacing */
+  align-items: center;
+  flex-direction: row; /* Ensure horizontal layout */
+}
+
+.realEstate-content-3-img {
+  width: 45px; /* Reduce size */
+  height: 45px; /* Reduce size */
+  padding: 7px;
+  background: rgba(117, 214, 171, 1);
+  border-radius: 50%;
+  display: flex;       /* Use flexbox to center content */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+}
+
+.realEstate-content-3-img img {
+  width: 22px; /* Reduce size */
+  height: 26px; /* Adjust height */
+}
+
+.realEstate-content-3-3 h3 {
+  font-size: 1.1rem; 
+  font-weight: bold; /* Responsive heading size */
+  margin-bottom: 5px;
+}
+
+.realEstate-content-3-3 p {
+  font-size: 0.9rem;  /* Responsive text size */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  #container {
+    width: 95%; /* Wider on smaller screens */
+  }
+
+  .realEstate-1 {
+    flex-direction: column; /* Stack cards on smaller screens */
+  }
+
+  .realEstate-content-1,
+  .realEstate-content-3 {
+    flex-direction: column; /* Stack content on smaller screens */
+    align-items: flex-start;   /* Align items to the left */
+  }
+
+  .realEstate-content-1-img,
+  .realEstate-content-3-img {
+    margin-bottom: 10px; /* Add space below the image */
+  }
+   .tab-content .realEstate-1{   /* fix for extra large screens */
+       flex-direction: row; /* Show horizontal content on screens bigger than 992px */
+   }
+}
+
+@media (max-width: 768px) {
+  #nav-list-id {
+    padding: 5px; /* Reduce padding further */
+    gap: 0px !important; /* Stack navigation items */
+    align-items: center; /* Center navigation items */
+  }
+
+  .nav-item {
+    margin-bottom: 5px; /* Add space between navigation items */
+  }
+
+  .RealEstatebutton {
+    text-align: center; /* Center button on smaller screens */
+  }
+}
+@media (max-width:600px) {
+  .tab-content {
+    padding: 0px; /* Add some padding */
+  }.nav-item button{
+    font-size: 12px;
+  }
+  .realEstate-content-1-1 h3 {
+    font-size: 15px;
+  }
+  .realEstate-content-3-3 h3{
+    font-size: 15px;
+  }
+  .realEstate-content-1-1 p {
+    font-size: 12px;
+}
+.realEstate-content-3-3 p{
+  font-size: 12px;
+}
+.section-title-2{
+  font-size: 18px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+}
+
+/* client */
+
+.testimonial-title{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 38px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: rgba(58, 73, 99, 1);
+  padding-bottom: 60px;
+}
+.testimonial-section {
+  padding: 150px 0;
+  text-align: center;
+  position: relative;
+}
+.testimonial-container img{
+    width: 50px;
+    height: 50px;
+}
+.testimonial-content,.testimonial-details{
+  text-align: center; 
+}
+.client-details{
+  width: 50%;
+  margin: auto;
+}
+.testimonial-content{
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.testimonial-name{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27.72px;
+  letter-spacing: 0%;
+}
+.testimonial-details{
+  display: flex;
+  margin-top: 20px;
+  /* margin: 20px; */
+  gap: 10px;
+  justify-content: center;
+}
+#testimonialContainer{
+  position: relative;
+  height: 444px;
+}
+.profile-image-1{
+  position: absolute;
+  top: 47px;
+  left: 62%;
+  right: 0px;
+  width: 116px !important;
+  height: 116px !important;
+
+}
+.profile-image-2{
+  position: absolute;
+  top: 12%;
+  left: 30%;
+  right: 0px;
+  width: 95px !important;
+  height: 95px !important;
+}
+.profile-image-3{
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  right: 0px;
+}
+.profile-image-4{
+  position: absolute;
+  top: 40%;
+  right: 79%;
+  width: 96px !important;
+ height: 96px !important;
+}
+.profile-image-5{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  right: 0px;
+}
+.profile-image-6{
+  position: absolute;
+  top: 90px;
+  /* left: 20px; */
+  right: 6%;
+}
+.profile-image-7{
+  position: absolute;
+  top: 39%;
+  /* left: 20px; */
+  right: 21%;
+  width: 77px !important;
+  height: 77px !important;
+}
+.testimonials-title {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 50px;
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image.main {
+  width: 120px;
+  height: 120px;
+  transform: translateY(-10px);
+  /* Slightly lift main profile */
+}
+
+.profile-image:not(.main) {
+  margin: 0 20px;
+  position: absolute;
+  top: 48%;
+  right: 43%;
+  width: 180px;
+  height: 180px;
+
+}
+
+.testimonial-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 5px;
+}
+
+.testimonial-rating {
+  color: #ffc107;
+}
+
+
+
+
+/* Scroll Bar */
+.scroll-container {
+  /* width: 250px; */
+  margin: 30px auto;
+  text-align: center;
+}
+
+.scroll-label {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+.scroll-bar-container{
+  padding-top: 30px
+}
+.scroll-bar {
+  width: 30%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: relative;
+  /* text-align: center; */
+  /* margin: auto; */
+  margin-top: 10px;
+}
+
+.scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background-color: rgba(230, 82, 82, 1);
+  /* Or any highlight color */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+
+@media (max-width:800px) {
+  .testimonial-title{
+    font-size: 30px;
+  }
+  .testimonial-section{
+    padding: 80px 0px;
+  }
+  .profile-image-2 {
+    left: 23%;
+    right: 0px;
+    width: 88px !important;
+    height: 83px !important;
+}
+.profile-image:not(.main) {
+  top: 44%;
+  right: 37%;
+  width: 142px;
+  height: 131px;
+}
+.profile-image-4 {
+  top: 40%;
+  right: 76%;
+  width: 87px !important;
+  height: 84px !important;
+}
+.profile-image-1 {
+  width: 95px !important;
+  height: 97px !important;
+}
+.profile-image-7 {
+  top: 43%;
+  width: 87px !important;
+  height: 87px !important;
+  left: 77%;
+}
+.testimonial-title{
+  padding-bottom: 30px;
+}
+}
+
+@media (max-width:550px) {
+  .profile-image:not(.main) {
+    top: 44%;
+    right: 33%;
+    width: 90px;
+    height: 88px;
+}
+.profile-image-2 {
+  left: 20%;
+  top: 25%;
+  width: 61px !important;
+  height: 58px !important;
+}
+#testimonialContainer {
+  height: 275px;
+}
+.profile-image-4 {
+  top: 43%;
+  right: 81%;
+  width: 56px !important;
+  height: 58px !important;
+}
+.profile-image-5 {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+}
+.profile-image-1 {
+  width: 69px !important;
+  height: 70px !important;
+}
+.profile-image-7 {
+  top: 38%;
+  width: 60px !important;
+  height: 62px !important;
+  left: 77%;
+}
+.profile-image-6 {
+  position: absolute;
+  top: 15px;
+  /* left: 20px; */
+  right: -1%;
+}
+.testimonial-title {
+  font-size: 25px;
+}
+.testimonial-section {
+  padding: 7px 0px;
+}
+.client-details{
+  width: 100%;
+  text-align: start;
+}
+.testimonial-content{
+  font-size: 12px;
+  text-align: start;
+}
+.testimonial-name{
+  font-size: 15px;
+}
+}
+/* usecase-section */
+
+/* usecases */
+/* Base Styles for Use Case Section */
+.use-cases-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.usecase-title {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: left;
+}
+
+.use-case-button {
+  background: rgba(230, 82, 82, 1);
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.use-case-button:hover {
+  background-color: #c52837;
+}
+
+.case-card {
+  background-color: #ffffff;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* justify-content: space-between; */
+  height: 100%;
+  width: 100%;
+  /* height: 400px; */
+  /* gap: 40px; */
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+
+.case-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-card .card-img {
+  border-radius: 10px;
+  
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-content h5 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 7px;
+}
+
+.card-content p.meta {
+  font-size: 14px;
+  color: rgba(86, 83, 83, 1);
+  margin-top: 10px;
+}
+
+#arrow-i {
+  font-size: 40px;
+  color: rgba(230, 82, 82, 1);
+}
+.card-inside-content{
+  display: flex;
+  padding: 10px;
+}
+/* Swiper Styling */
+.swiper {
+  width: 100%;
+  padding: 10px;
+}
+
+.swiper-scrollbar {
+  background: #818181 !important;
+  height: 7px !important;
+  border-radius: 2px !important;
+  width: 20% !important;
+  position: absolute !important;
+  bottom: 0px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: rgba(230, 82, 82, 1) !important;
+  height: 100%;
+  border-radius: 2px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .usecase-title {
+    font-size: 28px;
+  }
+
+  .case-card {
+    width: 100%;
+    height: auto;
+  }
+
+  #arrow-i {
+    font-size: 23px;
+  }
+  .card-content h5{
+    font-size: 18px;
+    margin-right: 3px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .usecase-title {
+    font-size: 20px;
+  }
+  
+  hr {
+    margin: 0px;
+  }
+
+  #arrow-i {
+    font-size: 20px;
+  }
+
+  .card-content h5 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .card-content p.meta {
+    font-size: 10px;
+  }
+  .use-case-button{
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+
+
+/* Get in touch with us */
+
+.get-in-touch{
+  padding: 100px 0px;
+}
+#contact-section {
+  background-image: url('./HomePage-img/Footer-img/footer-img.png'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0 50px 0;
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.get-in-touch-right h1{
+  color: rgba(255, 255, 255, 1);
+  font-family:"Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 38px;
+  letter-spacing: -2%;
+}
+.get-in-touch-right p{
+  color: rgba(255, 255, 255, 1);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1%;
+}
+.get-in-touch-btn button {
+  background: var(--Brand-Red---lines, rgba(230, 82, 82, 1));
+  border-color: #dc3545;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: -2%;
+}
+
+.contact-button:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+      font-size: 2rem;
+  }
+  .get-in-touch-right h1{
+    color: black;
+  }
+  .get-in-touch-right p{
+    color: black;
+  }
+  .contact-description {
+      font-size: 1rem;
+  }
+
+  .contact-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-title {
+      font-size: 1.7rem;
+  }
+
+  .contact-description {
+      font-size: 0.9rem;
+  }
+  .get-in-touch {
+    padding: 10px 0px;
+}
+
+
+}
+
+
+/* footer */
+
+
+.footer{
+ background-color: rgba(28, 37, 51, 1);
+ padding: 60px;
+ color: white;
+}
+
+.footer-logo img{
+  width: 286px;
+  height: 47px;
+  margin-bottom: 40px;
+}
+.footer-heading{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 14px;
+  font-family:"Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px !important;
+  line-height: 18px;
+}
+.logo-para p{
+  margin-bottom: 100px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.quick-links{
+  text-align: center;
+}
+.quick-links h4{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px;
+}
+.quick-links-content{
+  padding-top: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+}   
+.footer-hr{
+  margin: 50px 0px;
+  border: 1px solid rgba(115, 115, 115, 0.4)
+}
+.quick-links-content p{
+  padding-top: 5px;
+}
+.contact-email img{
+  width: 16px;
+  height: 13px;
+}
+.contact-us h4{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px;
+}
+.contact-us-content{
+  font-family: "Poppins";
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0%;
+
+}
+.contact-email{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding-top: 20px;
+}
+.contact-phone img{
+  width: 14px;
+  height: 14px;
+}
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 10px;
+}
+.follow-us{
+  text-align: center;
+}
+.follow-us h4{
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 16px;
+}
+.follow-us-icons img{
+  width: 10px;
+  height: 15px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.copy-rights{
+  margin-top: 40px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.copy-rights-content{
+  display: flex;
+  justify-content: space-between
+}
+.copy-rights-right-content {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width:1024px) {
+  .follow-us,.quick-links{
+    text-align: start;
+  }
+  .contact-phone,.contact-email{
+    display: block;
+  }
+}
+@media (max-width:1000px) {
+  .contact-phone,.contact-email{
+    display: flex;
+  }
+}
+@media (max-width:600px) {
+  
+  .contact-us h4 , .follow-us h4{
+    padding-top: 30px;
+  }
+  .footer-heading{
+    font-size: 5px !important;
+  }
+  .footer-logo img{
+    width: 150px;
+    height: 33px;
+  }
+  .footer-heading{
+    font-size: 10px !important;
+    display: block;
+  }
+  .copy-rights-right-content{
+    /* display: block; */
+    margin-top: 10px;
+  }
+  .copy-rights-content{
+    display: block;
+  }
+  .copy-rights{
+    margin-top: 10px;
+  }
+  .footer{
+    padding: 20px 0px;
+  }
+  .footer-hr{
+    margin: 20px 0px;
+  }
+  .logo-para p{
+    font-size: 12px
+  }
+  .follow-us-icons img {
+    width: 14px;
+    height: 14px;
+    margin-right: 15px;
+  }
+  .copy-rights {
+    font-size: 10px
+  }
+
+}
