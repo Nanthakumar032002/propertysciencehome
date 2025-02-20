@@ -553,6 +553,7 @@ font-size: 12px;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 10px;
+  background-color: white;
 }
 
 .house-hunt-button button {
@@ -645,6 +646,7 @@ font-size: 12px;
     gap: 15px;
     padding: 20px;
     margin-top: 20px;
+    z-index: -1;
 }
 
 .cards {
@@ -1021,6 +1023,7 @@ font-size: 12px;
     gap: 15px;
     padding: 20px;
     margin-top: 20px;
+    z-index: -1;
 }
 
 .cards {
@@ -1535,28 +1538,41 @@ padding-left: 10px;
 }
 }
  
-@media (max-width: 424px) {
+@media (max-width: 500px) {
   #buildings-image-2 {
     left: 50%;
-    bottom: 79px;
+    bottom: 6px;
     transform: translateX(-50%);
-    width: 184px;
-    height: 346px;
-  } 
+    width: 228px;
+  }
   
   #buildings-image-1 {
-    left: 18%;
-    bottom: 67px;
-    width: 100px;
-    height: 200px;
+    left: 0%;
+    bottom: -5px;
+    width: 186px;
   }
   
   #buildings-image-3 {
-    right: 10%;
-    bottom: 55px;
-    width: 100px;
-    height: 200px;
+    right: -3%;
+    bottom: -10px;
+    width: 243px;
   }
+  .section-title-1{
+   font-size: 20px;
+   padding-bottom: 20px;
+  }
+  .why-choose-section {
+    padding-top: 0px;
+}
+.feature-card-title {
+  font-size: 16px;
+}
+.feature-cards-container {
+  grid-template-columns: repeat(1, 1fr);
+}
+.feature-card-description {
+  font-size: 11px;
+}
 }
 /* India */
 
@@ -2397,6 +2413,7 @@ padding-left: 10px;
   border-radius: 5px;
   transition: width 0.3s ease;
 }
+
 
 
 @media (max-width:800px) {
